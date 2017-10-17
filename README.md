@@ -14,9 +14,21 @@ This should return some information pertaining to vagrant, if an error is displa
 
 ## Terminal Commands
 
+### Setup your directory
+
+First you need to create your host directory, this can be done using the following command:
+
+``` mkdir DirectoryName```
+
+Now you need to move into your new directory so make sure you have moved into the folder using the following command: 
+
+``` cd DirectoryName ```
+
 ### Clone the repo
 
-The first step is cloning the git repository. To do this go to the [github page](https://github.com/GNorfolk/Devops) you should be reading this on and click the green clone or download button. This will provide a link with which to clone the repo in the terminal. For example we will use the SSH method, we need to create a new directory in which to place the VM files and then the terminal command will be:
+The first step is cloning the git repository. To do this go to the [github page](https://github.com/GNorfolk/Devops) you should be reading this on and click the green clone or download button. This will provide a link with which to clone the repo in the terminal. 
+
+For example we will use the SSH method, we need to create a new directory in which to place the VM files and then the terminal command will be:
 
 ```git clone git@github.com:GNorfolk/Devops.git```
 
@@ -24,17 +36,13 @@ The first step is cloning the git repository. To do this go to the [github page]
 
 ### Install Vagrant dependencies 
 
-Now you need to move into your new directory so make sure you have moved into the folder using the following command: 
-
-``` cd dirname ```
-
 To install everything needed for your VM you simply need to run the following command:
 
 ```vagrant up```
 
 This will install everything but will also initialize the VM so that it is running in the background. 
 
-** Congratulations, you now have a functional Virtual Machine! **
+** Congratulations, you now have a functional Virtual Machine! ** 
 
 ### Interacting with the VM
 

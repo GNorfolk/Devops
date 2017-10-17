@@ -1,4 +1,4 @@
-# Vangrant VM installation
+# Vagrant VM installation
 
 ## Prerequisites
 
@@ -14,16 +14,6 @@ This should return some information pertaining to vagrant, if an error is displa
 
 ## Terminal Commands
 
-### Setup your directory
-
-First you need to create your host directory, this can be done using the following command:
-
-``` mkdir DirectoryName```
-
-Now you need to move into your new directory so make sure you have moved into the folder using the following command: 
-
-``` cd DirectoryName ```
-
 ### Clone the repo
 
 The first step is cloning the git repository. To do this go to the [github page](https://github.com/GNorfolk/Devops) you should be reading this on and click the green clone or download button. This will provide a link with which to clone the repo in the terminal. 
@@ -32,7 +22,11 @@ For example we will use the SSH method, we need to create a new directory in whi
 
 ```git clone git@github.com:GNorfolk/Devops.git```
 
-** If you dont have your computer setup with SSH data transfer then this wont work! **
+__ If you dont have your computer setup with SSH data transfer then this wont work! __
+
+Now you need to move into your new directory so make sure you have moved into the folder using the following command: 
+
+``` cd Devops ```
 
 ### Install Vagrant dependencies 
 
@@ -42,7 +36,7 @@ To install everything needed for your VM you simply need to run the following co
 
 This will install everything but will also initialize the VM so that it is running in the background. 
 
-** Congratulations, you now have a functional Virtual Machine! ** 
+__ Congratulations, you now have a functional Virtual Machine! __ 
 
 ### Interacting with the VM
 
@@ -67,11 +61,3 @@ When typed into your machine's terminal, this will do the opposite of "up" and w
 ```vagrant reload```
 
 The above will stop the VM and then reload it with any changes you made to the Vagrantfile file. 
-
-### Customise Vagrant
-
-Inside your directory there should be a initialization file, ours should be called ```ubuntu-xenial-16.04-cloudimg-console.log```. If you do not have this file, managed to delete it already, or want to rebuild it to fix errors then you can regenerate the file using the following command:
-
-```vagrant init ubuntu/xenial64```
-
-And if you dont want to install this OS into your VM you can find a list of other options [here](https://app.vagrantup.com/boxes/search).

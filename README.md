@@ -20,7 +20,13 @@ The first step is cloning the git repository. To do this go to the [github page]
 
 ```git clone git@github.com:GNorfolk/Devops.git```
 
+** If you dont have your computer setup with SSH data transfer then this wont work! **
+
 ### Install Vagrant dependencies 
+
+Now you need to move into your new directory so make sure you have moved into the folder using the following command: 
+
+``` cd dirname ```
 
 To install everything needed for your VM you simply need to run the following command:
 

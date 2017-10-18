@@ -36,7 +36,7 @@ To install everything needed for your VM you simply need to run the following co
 
 This will install everything but will also initialize the VM so that it is running in the background. 
 
-__ Congratulations, you now have a functional Virtual Machine! __ 
+**Congratulations, you now have a functional Virtual Machine!**
 
 ### Interacting with the VM
 

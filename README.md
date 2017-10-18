@@ -22,7 +22,7 @@ For example we will use the SSH method, we need to create a new directory in whi
 
 ```git clone git@github.com:GNorfolk/Devops.git```
 
-__ If you dont have your computer setup with SSH data transfer then this wont work! __
+**If you dont have your computer setup with SSH data transfer then this wont work!**
 
 Now you need to move into your new directory so make sure you have moved into the folder using the following command: 
 

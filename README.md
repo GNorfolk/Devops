@@ -22,7 +22,7 @@ For example we will use the SSH method, we need to create a new directory in whi
 
 ```git clone git@github.com:GNorfolk/Devops.git```
 
-__ If you dont have your computer setup with SSH data transfer then this wont work! __
+**If you dont have your computer setup with SSH data transfer then this wont work!**
 
 Now you need to move into your new directory so make sure you have moved into the folder using the following command: 
 
@@ -36,7 +36,7 @@ To install everything needed for your VM you simply need to run the following co
 
 This will install everything but will also initialize the VM so that it is running in the background. 
 
-__ Congratulations, you now have a functional Virtual Machine! __ 
+**Congratulations, you now have a functional Virtual Machine!**
 
 ### Interacting with the VM
 

@@ -12,4 +12,10 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.10.100"
   config.hostsupdater.aliases = ["development.local"]
 
+  # sync the app folder to the guest
+  config.vm.synced_folder "app", "/home/ubuntu/app"
+
+  # run the app provisioning script
+  config.vm.provision "shell", path: "environment/app/provision.sh"
+
 end

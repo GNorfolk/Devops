@@ -15,5 +15,6 @@ sudo apt-get install -y nodejs
 sudo npm install pm2 -g
 
 # add user and group
+
 sudo adduser --disabled-password app
-sudo chown -R app:app app
+sudo chown -R app:app /home/ubuntu/app

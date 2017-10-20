@@ -13,3 +13,7 @@ sudo apt-get install -y nodejs
 
 # install pm2 with npm
 sudo npm install pm2 -g
+
+# add user and group
+sudo adduser --disabled-password app
+sudo chown -R app:app app

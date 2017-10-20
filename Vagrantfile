@@ -18,4 +18,7 @@ Vagrant.configure("2") do |config|
   # run the app provisioning script
   config.vm.provision "shell", path: "environment/app/provision.sh"
 
+  # sync the environment folder to the guest 
+  config.vm.synced_folder "environment", "/home/ubuntu/environment"
+
 end

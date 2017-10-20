@@ -14,9 +14,24 @@ sudo apt-get install -y nodejs
 # install pm2 with npm
 sudo npm install pm2 -g
 
-# add user and group
+# add user and give app ownership
 sudo adduser --disabled-password --gecos "" app
 sudo chown -R app:ubuntu /home/ubuntu/app
 
 # change app folder permissions
 sudo chmod 570 app
+
+# proxy port 80 to direct to 3000
+sudo unlink /etc/nginx/sites-enabled/default
+sudo cp /home/ubuntu/environment/app/reverse-proxy.conf /etc/nginx/sites-available/
+sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
+sudo service nginx configtest
+sudo service nginx restart
+
+
+
+# sudo touch /etc/nginx/sites-available/reverse-proxy.conf
+
+# sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
+# sudo service nginx configtest
+# sudo service nginx restart

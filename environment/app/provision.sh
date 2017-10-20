@@ -15,6 +15,8 @@ sudo apt-get install -y nodejs
 sudo npm install pm2 -g
 
 # add user and group
-
 sudo adduser --disabled-password --gecos "" app
-sudo chown -R app:app /home/ubuntu/app
+sudo chown -R app:ubuntu /home/ubuntu/Devops/app
+
+# change app folder permissions
+sudo chmod 570 app

@@ -23,18 +23,8 @@ sudo chmod 570 app
 
 # proxy port 80 to direct to 3000
 sudo unlink /etc/nginx/sites-enabled/default
-sudo ln -s Devops/environment environment
-# sudo cp /home/ubuntu/Devops/environment/app/reverse-proxy.conf /etc/nginx/sites-available/
+sudo ln -s home/ubuntu/Devops/environment home/ubuntu/environment
 sudo cp /home/ubuntu/environment/app/reverse-proxy.conf /etc/nginx/sites-available/
 sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
 sudo service nginx configtest
 sudo service nginx restart
-pwd
-
-
-
-# sudo touch /etc/nginx/sites-available/reverse-proxy.conf
-
-# sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
-# sudo service nginx configtest
-# sudo service nginx restart

@@ -27,6 +27,7 @@ sudo cp /home/ubuntu/environment/app/reverse-proxy.conf /etc/nginx/sites-availab
 sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
 sudo service nginx configtest
 sudo service nginx restart
+pwd
 
 
 

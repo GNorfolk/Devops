@@ -27,4 +27,5 @@ sudo rm /etc/mongod.conf
 sudo cp /home/ubuntu/environment/db/mongod.conf /etc/mongod.conf
 
 # Resets mondo service
-sudo service mongod restart
+sudo service mongodb enable
+sudo service mongodb restart

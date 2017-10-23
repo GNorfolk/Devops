@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
   # sync the environment folder to the guest 
   config.vm.synced_folder "environment", "/home/ubuntu/environment"
 
-  config.vm.define "web" do |web|
+  config.vm.define "app" do |app|
     
     config.vm.network "private_network", ip: "192.168.10.100"
     config.hostsupdater.aliases = ["development.local"]

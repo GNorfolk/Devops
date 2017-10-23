@@ -15,24 +15,25 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "app" do |app|
     
-    config.vm.network "private_network", ip: "192.168.10.100"
-    config.hostsupdater.aliases = ["development.local"]
+    app.vm.network "private_network", ip: "192.168.10.100"
+    app.hostsupdater.aliases = ["development.local"]
 
     # sync the app folder to the guest
-    config.vm.synced_folder "app", "/home/ubuntu/app"
+    app.vm.synced_folder "app", "/home/ubuntu/app"
 
     # run the app provisioning script
-    config.vm.provision "shell", path: "environment/app/provision.sh"
+    app.vm.provision "shell", inline: "echo 'export DB_HOST=mongodb://192.168.10.101/blog' >> /home/ubuntu/.bashrc"
+    app.vm.provision "shell", path: "environment/app/provision.sh"
 
   end
 
   config.vm.define "db" do |db|
     
-    config.vm.network "private_network", ip: "192.168.10.101"
-    config.hostsupdater.aliases = ["database.local"]
+    db.vm.network "private_network", ip: "192.168.10.101"
+    db.hostsupdater.aliases = ["database.local"]
 
     # run the app provisioning script
-    config.vm.provision "shell", path: "environment/db/provision.sh"
+    db.vm.provision "shell", path: "environment/db/provision.sh"
 
   end
 

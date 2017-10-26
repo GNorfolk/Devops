@@ -1,0 +1,11 @@
+DEPENDENCIES
+  mongodb_server
+    git: https://github.com/GNorfolk/MongoDBCookbook
+    revision: 420c8f9d6765de1c686618d4e2d7465c20bad90e
+  node-server
+    git: https://github.com/GNorfolk/MongoAppCookbook
+    revision: 23b63caa7c7b737c82ee6ff71fe0b797d225e17a
+
+GRAPH
+  mongodb_server (0.1.0)
+  node-server (0.1.0)

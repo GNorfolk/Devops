@@ -17,7 +17,7 @@ sudo apt-get update -y
 sudo apt-get install -y mongodb-org
 
 # copy service file into necessary place
-sudo cp /home/ubuntu/environment/db/mongodb.service /etc/systemd/system/
+sudo cp /home/ubuntu/environment/db/mongodb.service /lib/systemd/system/
 
 # start up mongo service
 sudo systemctl start mongodb
@@ -26,6 +26,6 @@ sudo systemctl start mongodb
 sudo rm /etc/mongod.conf
 sudo cp /home/ubuntu/environment/db/mongod.conf /etc/mongod.conf
 
-# Resets mondo service
+# Resets mongo service
 sudo service mongodb enable
 sudo service mongodb restart

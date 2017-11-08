@@ -13,7 +13,7 @@ resource "aws_vpc" "uat" {
 
 # application inastance
 resource "aws_instance" "app" {
-	ami = "ami-82ffe3e6"
+	ami = "ami-3ef4e85a"
 	instance_type = "t2.micro"
 	subnet_id = "${aws_subnet.public.id}"
 	security_groups = ["${aws_security_group.app.id}"]
